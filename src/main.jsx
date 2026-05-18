@@ -55,19 +55,19 @@ const projects = [
 ];
 
 const skills = [
-  { icon: Code2, label: "Frontend", detail: "React, responsive UI, polished component systems" },
-  { icon: Server, label: "Backend", detail: "Node.js, Express APIs, auth, realtime services" },
+  { icon: Code2, label: "React Expertise", detail: "Modern React apps, responsive UI, polished component systems" },
+  { icon: Server, label: "Node.js Backend", detail: "Express APIs, auth, realtime services, backend architecture" },
   { icon: Database, label: "Data", detail: "MongoDB schemas, relationships, secure persistence" },
+  { icon: Smartphone, label: "Flutter Mobile", detail: "Cross-platform mobile interfaces for Android-ready products" },
   { icon: Rocket, label: "Deployment", detail: "Vercel, Railway, environment setup, production fixes" },
-  { icon: ShieldCheck, label: "Quality", detail: "Bug fixing, role access, validation, clean user flows" },
-  { icon: Smartphone, label: "Mobile UX", detail: "Android-ready layouts and touch-friendly screens" }
+  { icon: ShieldCheck, label: "Quality", detail: "Bug fixing, role access, validation, clean user flows" }
 ];
 
 const stats = [
   ["3+", "Production-ready apps"],
-  ["Full-stack", "Development focus"],
-  ["Realtime", "Socket-based features"],
-  ["Mobile-first", "Responsive delivery"]
+  ["BSE", "Software engineering"],
+  ["React + Node", "Core expertise"],
+  ["Flutter", "Mobile development"]
 ];
 
 const contact = {
@@ -111,15 +111,17 @@ function App() {
           <div className="hero-copy">
             <div className="eyebrow">
               <Sparkles size={16} />
-              Full-stack React & Node.js developer
+              Undergraduate software engineering student
             </div>
 
-            <h1>Professional web applications built for real users.</h1>
+            <h1>Muhammad Hamza builds full-stack web and mobile products.</h1>
 
             <p>
-              I help founders, students, and small businesses turn ideas into
-              polished digital products using React, Node.js, MongoDB, realtime
-              features, responsive UI, and production deployment.
+              I am an undergraduate pursuing a Bachelor&apos;s in Software
+              Engineering, focused on full-stack web development and Flutter
+              mobile development. My strongest expertise is building responsive
+              React frontends, Node.js backends, MongoDB-powered systems, and
+              production-ready user experiences.
             </p>
 
             <div className="hero-contact-card">
@@ -157,9 +159,9 @@ function App() {
 
               <div className="terminal-body">
                 <p><span>$</span> npm run build</p>
-                <p className="success">✓ frontend compiled</p>
-                <p className="success">✓ backend deployed</p>
-                <p className="success">✓ realtime ready</p>
+                <p className="success">✓ React frontend compiled</p>
+                <p className="success">✓ Node.js backend deployed</p>
+                <p className="success">✓ Flutter mobile UI ready</p>
               </div>
             </div>
 
@@ -167,7 +169,7 @@ function App() {
               <div className="avatar-mark">H</div>
               <div>
                 <strong>Muhammad Hamza</strong>
-                <span>Full-stack web developer</span>
+                <span>Software engineering undergraduate</span>
               </div>
             </div>
           </div>
@@ -363,11 +365,11 @@ function App() {
         <section className="section split-section" id="skills">
           <div className="section-heading compact">
             <span>Capabilities</span>
-            <h2>Reliable engineering with a polished product finish.</h2>
+            <h2>Full-stack engineering with strong web and mobile focus.</h2>
             <p>
-              I focus on the details that make an application feel trustworthy:
-              readable UI, responsive behavior, secure authentication, stable APIs,
-              and a clean launch process.
+              I work across React, Node.js, MongoDB, and Flutter, with a focus on
+              clean interfaces, stable APIs, responsive layouts, authentication,
+              and apps that feel professional on desktop and Android.
             </p>
           </div>
 
@@ -416,8 +418,9 @@ function App() {
             <span>Available for work</span>
             <h2>Let’s build something professional.</h2>
             <p>
-              Reach out for portfolios, dashboards, full-stack apps, realtime
-              projects, landing pages, or mobile-responsive UI improvements.
+              Reach out for portfolios, dashboards, full-stack MERN apps,
+              React interfaces, Node.js APIs, Flutter mobile screens, landing
+              pages, or mobile-responsive UI improvements.
             </p>
 
             <div className="contact-details">
