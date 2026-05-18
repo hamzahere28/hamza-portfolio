@@ -29,6 +29,14 @@ const projects = [
     link: "https://hamza-discord-clone.vercel.app"
   },
   {
+    title: "LaunchPilot AI",
+    type: "AI SaaS Platform",
+    description:
+      "A MERN SaaS product with a professional landing site, dashboard, admin panel, AI Studio, billing UI, MongoDB Atlas integration, and one-link Vercel deployment.",
+    stack: ["React", "Express", "MongoDB Atlas", "AI API", "Vercel"],
+    link: "https://launchpilot-ai-saas.vercel.app"
+  },
+  {
     title: "Admin Control Center",
     type: "Operations Dashboard",
     description:
@@ -245,6 +253,79 @@ function App() {
                 </div>
               </div>
               <div className="preview-composer">Message #general</div>
+            </div>
+          </a>
+        </section>
+
+        <section className="featured-app saas-featured">
+          <div className="featured-copy">
+            <span className="project-type">New AI SaaS deployment</span>
+            <h2>LaunchPilot AI - SaaS landing page and dashboard.</h2>
+            <p>
+              A full-stack MERN SaaS application with public marketing pages,
+              demo login, protected dashboard, project workspaces, AI generation,
+              billing UI, admin analytics, and MongoDB Atlas-ready persistence.
+            </p>
+
+            <div className="deployment-list" aria-label="LaunchPilot deployment details">
+              <div>
+                <strong>Frontend</strong>
+                <span>Responsive React SaaS website</span>
+              </div>
+              <div>
+                <strong>Backend</strong>
+                <span>Express API under the same Vercel link</span>
+              </div>
+              <div>
+                <strong>Database</strong>
+                <span>MongoDB Atlas integration configured</span>
+              </div>
+            </div>
+
+            <div className="hero-actions">
+              <a className="primary-btn" href="https://launchpilot-ai-saas.vercel.app" target="_blank" rel="noreferrer">
+                Open Live SaaS
+                <ArrowUpRight size={18} />
+              </a>
+
+              <a className="secondary-btn" href="#contact">
+                Build Something Like This
+                <Mail size={18} />
+              </a>
+            </div>
+          </div>
+
+          <a
+            className="app-preview saas-preview"
+            href="https://launchpilot-ai-saas.vercel.app"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open the live LaunchPilot AI SaaS application"
+          >
+            <div className="preview-sidebar">
+              <span className="active-bubble">AI</span>
+              <span>DB</span>
+              <span>$</span>
+            </div>
+            <div className="preview-main">
+              <div className="preview-top">
+                <strong>LaunchPilot AI</strong>
+                <span>Live</span>
+              </div>
+              <div className="saas-bars">
+                <i style={{ height: "44%" }} />
+                <i style={{ height: "68%" }} />
+                <i style={{ height: "82%" }} />
+                <i style={{ height: "58%" }} />
+              </div>
+              <div className="preview-message">
+                <span>LP</span>
+                <div>
+                  <strong>AI Studio</strong>
+                  <p>Generate SaaS copy, plans, pricing, and launch assets.</p>
+                </div>
+              </div>
+              <div className="preview-composer">Admin, billing, dashboard, and landing pages</div>
             </div>
           </a>
         </section>
