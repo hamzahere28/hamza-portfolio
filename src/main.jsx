@@ -21,6 +21,14 @@ import "./styles.css";
 
 const projects = [
   {
+    title: "CareSync",
+    type: "MERN Healthcare Platform",
+    description:
+      "A deployed healthcare appointment platform with doctor discovery, booking, dashboards, prescriptions, admin workflows, and AI-assisted visit summaries.",
+    stack: ["React", "Express", "MongoDB", "Gemini API", "Vercel"],
+    link: "https://caresync-healthcare-platform.vercel.app"
+  },
+  {
     title: "Iscord",
     type: "Live Full-Stack Product",
     description:
@@ -64,7 +72,7 @@ const skills = [
 ];
 
 const stats = [
-  ["3+", "Production-ready apps"],
+  ["4+", "Production-ready apps"],
   ["BSE", "Software engineering"],
   ["React + Node", "Core expertise"],
   ["Flutter", "Mobile development"]
@@ -185,6 +193,80 @@ function App() {
         </section>
 
         <section className="featured-app" id="featured">
+          <div className="featured-copy">
+            <span className="project-type">Latest healthcare deployment</span>
+            <h2>CareSync - healthcare appointments and clinical workflows.</h2>
+            <p>
+              A MERN healthcare platform with doctor discovery, appointment
+              booking, patient and admin dashboards, prescriptions, responsive
+              mobile views, and AI-assisted visit summary workflows.
+            </p>
+
+            <div className="deployment-list" aria-label="CareSync deployment details">
+              <div>
+                <strong>Frontend</strong>
+                <span>Vercel production deployment</span>
+              </div>
+              <div>
+                <strong>Backend</strong>
+                <span>Express and MongoDB API architecture</span>
+              </div>
+              <div>
+                <strong>Experience</strong>
+                <span>Demo data fallback keeps the app explorable live</span>
+              </div>
+            </div>
+
+            <div className="hero-actions">
+              <a className="primary-btn" href="https://caresync-healthcare-platform.vercel.app" target="_blank" rel="noreferrer">
+                Open CareSync
+                <ArrowUpRight size={18} />
+              </a>
+
+              <a className="secondary-btn" href="#contact">
+                Build Healthcare Software
+                <Mail size={18} />
+              </a>
+            </div>
+          </div>
+
+          <a
+            className="app-preview healthcare-preview"
+            href="https://caresync-healthcare-platform.vercel.app"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open the live CareSync healthcare platform"
+          >
+            <div className="preview-sidebar">
+              <span className="active-bubble">CS</span>
+              <span>DR</span>
+              <span>AI</span>
+            </div>
+            <div className="preview-main">
+              <div className="preview-top">
+                <strong>CareSync</strong>
+                <span>Live</span>
+              </div>
+              <div className="preview-message">
+                <span>DR</span>
+                <div>
+                  <strong>Doctor discovery</strong>
+                  <p>Search specialists, review profiles, and book clinic or video visits.</p>
+                </div>
+              </div>
+              <div className="preview-message compact">
+                <span>AI</span>
+                <div>
+                  <strong>Visit summaries</strong>
+                  <p>Gemini-ready assistant flow for care notes and patient education.</p>
+                </div>
+              </div>
+              <div className="preview-composer">Appointments, dashboards, prescriptions, and admin views</div>
+            </div>
+          </a>
+        </section>
+
+        <section className="featured-app">
           <div className="featured-copy">
             <span className="project-type">Featured deployed application</span>
             <h2>Iscord - realtime Discord-style web app.</h2>
