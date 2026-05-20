@@ -199,7 +199,7 @@ function App() {
             </div>
 
             <div className="profile-card">
-              <div className="avatar-mark">H</div>
+              <img className="profile-photo" src="/profile-photo.jpeg" alt="Muhammad Hamza" />
               <div>
                 <strong>Muhammad Hamza</strong>
                 <span>Software engineering undergraduate</span>
