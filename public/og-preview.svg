@@ -9,7 +9,7 @@
   <circle cx="160" cy="90" r="240" fill="#38bdf8" opacity=".14"/>
   <circle cx="1040" cy="580" r="260" fill="#f4c95d" opacity=".14"/>
   <rect x="72" y="72" width="1056" height="486" rx="34" fill="#111821" stroke="rgba(255,255,255,.14)"/>
-  <text x="118" y="174" fill="#9ee7ff" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="800">FULL-STACK WEB + FLUTTER DEVELOPER</text>
+  <text x="118" y="174" fill="#9ee7ff" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="800">FULL-STACK WEB DEVELOPER</text>
   <text x="118" y="286" fill="#f7fafc" font-family="Inter,Arial,sans-serif" font-size="78" font-weight="900">Muhammad Hamza</text>
   <text x="118" y="360" fill="#9aa8b8" font-family="Inter,Arial,sans-serif" font-size="34">React, Node.js, MongoDB, AI SaaS, healthcare, realtime chat</text>
   <rect x="118" y="428" width="280" height="70" rx="18" fill="url(#g)"/>

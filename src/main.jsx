@@ -6,7 +6,6 @@ import {
   CheckCircle2,
   Code2,
   Database,
-  Download,
   FileText,
   Globe2,
   Layers3,
@@ -17,7 +16,6 @@ import {
   Send,
   Server,
   ShieldCheck,
-  Smartphone,
   Sparkles,
   Terminal,
   X
@@ -95,7 +93,7 @@ const skills = [
   { icon: Code2, label: "React Frontends", detail: "Responsive interfaces, dashboards, component systems, and polished UX" },
   { icon: Server, label: "Node.js APIs", detail: "Express services, auth foundations, realtime features, and route design" },
   { icon: Database, label: "MongoDB", detail: "Schemas, relationships, seed data, and production database wiring" },
-  { icon: Smartphone, label: "Flutter Mobile", detail: "Android-ready mobile screens and cross-platform app structure" },
+  { icon: Globe2, label: "Responsive Web", detail: "Mobile-friendly web layouts, landing pages, and product interfaces" },
   { icon: Rocket, label: "Deployment", detail: "Vercel, Railway, environment variables, builds, aliases, and production fixes" },
   { icon: ShieldCheck, label: "Product Quality", detail: "Validation, role flows, fallback states, and reliable demos" }
 ];
@@ -148,14 +146,14 @@ function App() {
           <div className="hero-copy">
             <div className="eyebrow">
               <Sparkles size={16} />
-              Full-stack web and Flutter developer
+              Full-stack web developer
             </div>
 
             <h1>Building deployed products with clean UI, stable APIs, and product thinking.</h1>
 
             <p>
               I am Muhammad Hamza, an undergraduate software engineering student
-              focused on React, Node.js, MongoDB, and Flutter. I build portfolio-ready
+              focused on React, Node.js, and MongoDB. I build portfolio-ready
               products that look polished, work on mobile, and can be deployed live.
             </p>
 
@@ -177,9 +175,9 @@ function App() {
                 <ArrowUpRight size={18} />
               </a>
 
-              <a className="secondary-btn" href="/muhammad-hamza-cv.txt" download>
-                <Download size={18} />
-                Download CV
+              <a className="secondary-btn" href={`mailto:${contact.email}`}>
+                <Mail size={18} />
+                Contact Me
               </a>
             </div>
           </div>
@@ -327,9 +325,9 @@ function App() {
               for real workflows: auth foundations, data models, dashboards,
               admin views, AI routes, and deployment setup.
             </p>
-            <a className="secondary-btn inline-btn" href="/muhammad-hamza-cv.txt" download>
-              <Download size={18} />
-              Download CV
+            <a className="secondary-btn inline-btn" href={contact.github} target="_blank" rel="noreferrer">
+              <Code2 size={18} />
+              View GitHub
             </a>
           </div>
 
@@ -415,7 +413,7 @@ function App() {
             <h2>Let us build something professional.</h2>
             <p>
               Reach out for portfolios, dashboards, full-stack MERN apps,
-              React interfaces, Node.js APIs, Flutter mobile screens, landing
+              React interfaces, Node.js APIs, dashboards, landing
               pages, or mobile-responsive UI improvements.
             </p>
 
