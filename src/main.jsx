@@ -2,14 +2,19 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import {
   ArrowUpRight,
+  BriefcaseBusiness,
+  CheckCircle2,
   Code2,
   Database,
+  Download,
+  FileText,
   Globe2,
   Layers3,
   Mail,
   Menu,
   Phone,
   Rocket,
+  Send,
   Server,
   ShieldCheck,
   Smartphone,
@@ -19,74 +24,98 @@ import {
 } from "lucide-react";
 import "./styles.css";
 
+const contact = {
+  email: "hamzatalha783@gmail.com",
+  phone: "+92 3177113621",
+  phoneHref: "tel:+923177113621",
+  github: "https://github.com/hamzahere28"
+};
+
 const projects = [
   {
+    slug: "caresync",
     title: "CareSync",
     type: "MERN Healthcare Platform",
-    description:
+    live: "https://caresync-healthcare-platform.vercel.app",
+    source: contact.github,
+    summary:
       "A deployed healthcare appointment platform with doctor discovery, booking, dashboards, prescriptions, admin workflows, and AI-assisted visit summaries.",
+    problem:
+      "Healthcare demos often stop at simple forms. CareSync was built to feel like a practical clinic product with patient, doctor, and admin workflows.",
+    solution:
+      "I designed a multi-page React experience backed by an Express/MongoDB architecture, demo-safe fallback data, booking flows, operational dashboards, and Gemini-ready summary routes.",
+    outcome:
+      "The app is live on Vercel and remains explorable even when the backend is not running, which makes it reliable for portfolio visitors and interviews.",
     stack: ["React", "Express", "MongoDB", "Gemini API", "Vercel"],
-    link: "https://caresync-healthcare-platform.vercel.app"
+    highlights: ["Doctor search", "Appointment booking", "Admin dashboard", "AI visit summaries"],
+    metrics: ["9+ pages", "3 user roles", "API-ready"],
+    accent: "healthcare"
   },
   {
+    slug: "iscord",
     title: "Iscord",
-    type: "Live Full-Stack Product",
-    description:
+    type: "Realtime Chat Product",
+    live: "https://hamza-discord-clone.vercel.app",
+    source: "https://github.com/hamzahere28/discord-clone",
+    summary:
       "A deployed Discord-inspired chat platform with styled authentication, mobile-first chat, direct messages, profile uploads, roles, channels, and realtime messaging.",
+    problem:
+      "The goal was to build more than a static chat UI: it needed live messaging, user flows, channel structure, and a mobile-friendly product surface.",
+    solution:
+      "I connected a React frontend with a Node/Socket.IO backend, MongoDB persistence, Railway API hosting, and Vercel frontend deployment.",
+    outcome:
+      "The result is a public full-stack app that demonstrates realtime product architecture, mobile UI decisions, and production deployment.",
     stack: ["React", "Node.js", "Socket.IO", "MongoDB", "Vercel", "Railway"],
-    link: "https://hamza-discord-clone.vercel.app"
+    highlights: ["Realtime messages", "Direct messages", "Profile uploads", "Role structure"],
+    metrics: ["Live sockets", "Mobile UI", "Railway API"],
+    accent: "chat"
   },
   {
+    slug: "launchpilot",
     title: "LaunchPilot AI",
     type: "AI SaaS Platform",
-    description:
+    live: "https://launchpilot-ai-saas.vercel.app",
+    source: "https://github.com/hamzahere28/mern-ai-saas",
+    summary:
       "A MERN SaaS product with a professional landing site, dashboard, admin panel, AI Studio, billing UI, MongoDB Atlas integration, and one-link Vercel deployment.",
+    problem:
+      "SaaS demos need to show trust quickly: landing page, dashboard, admin views, pricing, and AI output should feel connected.",
+    solution:
+      "I built a polished product shell with protected dashboard-style screens, AI generation surfaces, billing UI, and deployment-ready environment structure.",
+    outcome:
+      "LaunchPilot AI shows full-stack SaaS thinking from marketing page to app dashboard, which helps position the work as product engineering.",
     stack: ["React", "Express", "MongoDB Atlas", "AI API", "Vercel"],
-    link: "https://launchpilot-ai-saas.vercel.app"
-  },
-  {
-    title: "Admin Control Center",
-    type: "Operations Dashboard",
-    description:
-      "A secure dashboard for managing users, servers, permissions, message moderation, and community health metrics.",
-    stack: ["Express", "JWT", "MongoDB", "Railway"],
-    link: "#contact"
-  },
-  {
-    title: "Responsive Product UI",
-    type: "Frontend System",
-    description:
-      "Mobile-first interface work focused on clean layouts, touch-friendly controls, fast navigation, and production deployment.",
-    stack: ["React", "CSS", "Vercel", "UX"],
-    link: "#work"
+    highlights: ["AI Studio", "Admin analytics", "Billing UI", "Dashboard"],
+    metrics: ["SaaS flow", "AI-ready", "Atlas-ready"],
+    accent: "saas"
   }
 ];
 
 const skills = [
-  { icon: Code2, label: "React Expertise", detail: "Modern React apps, responsive UI, polished component systems" },
-  { icon: Server, label: "Node.js Backend", detail: "Express APIs, auth, realtime services, backend architecture" },
-  { icon: Database, label: "Data", detail: "MongoDB schemas, relationships, secure persistence" },
-  { icon: Smartphone, label: "Flutter Mobile", detail: "Cross-platform mobile interfaces for Android-ready products" },
-  { icon: Rocket, label: "Deployment", detail: "Vercel, Railway, environment setup, production fixes" },
-  { icon: ShieldCheck, label: "Quality", detail: "Bug fixing, role access, validation, clean user flows" }
+  { icon: Code2, label: "React Frontends", detail: "Responsive interfaces, dashboards, component systems, and polished UX" },
+  { icon: Server, label: "Node.js APIs", detail: "Express services, auth foundations, realtime features, and route design" },
+  { icon: Database, label: "MongoDB", detail: "Schemas, relationships, seed data, and production database wiring" },
+  { icon: Smartphone, label: "Flutter Mobile", detail: "Android-ready mobile screens and cross-platform app structure" },
+  { icon: Rocket, label: "Deployment", detail: "Vercel, Railway, environment variables, builds, aliases, and production fixes" },
+  { icon: ShieldCheck, label: "Product Quality", detail: "Validation, role flows, fallback states, and reliable demos" }
 ];
 
 const stats = [
   ["4+", "Production-ready apps"],
-  ["BSE", "Software engineering"],
-  ["React + Node", "Core expertise"],
-  ["Flutter", "Mobile development"]
+  ["3", "Live case studies"],
+  ["React + Node", "Core stack"],
+  ["BSE", "Software engineering"]
 ];
 
-const contact = {
-  email: "hamzatalha783@gmail.com",
-  phone: "+92 3177113621",
-  phoneHref: "tel:+923177113621"
-};
+const outcomes = [
+  "Built and deployed full-stack MERN products with Vercel and Railway.",
+  "Designed portfolio-ready healthcare, SaaS, and realtime chat workflows.",
+  "Created responsive interfaces that stay usable on mobile and desktop.",
+  "Connected frontend experiences to API, database, auth, and AI foundations."
+];
 
 function App() {
   const [menuOpen, setMenuOpen] = React.useState(false);
-
   const closeMenu = () => setMenuOpen(false);
 
   return (
@@ -108,8 +137,8 @@ function App() {
 
         <nav className={menuOpen ? "nav-links open" : "nav-links"}>
           <a href="#work" onClick={closeMenu}>Work</a>
-          <a href="#skills" onClick={closeMenu}>Skills</a>
-          <a href="#process" onClick={closeMenu}>Process</a>
+          <a href="#case-studies" onClick={closeMenu}>Case Studies</a>
+          <a href="#about" onClick={closeMenu}>About</a>
           <a href="#contact" onClick={closeMenu}>Contact</a>
         </nav>
       </header>
@@ -119,17 +148,15 @@ function App() {
           <div className="hero-copy">
             <div className="eyebrow">
               <Sparkles size={16} />
-              Undergraduate software engineering student
+              Full-stack web and Flutter developer
             </div>
 
-            <h1>Muhammad Hamza builds full-stack web and mobile products.</h1>
+            <h1>Building deployed products with clean UI, stable APIs, and product thinking.</h1>
 
             <p>
-              I am an undergraduate pursuing a Bachelor&apos;s in Software
-              Engineering, focused on full-stack web development and Flutter
-              mobile development. My strongest expertise is building responsive
-              React frontends, Node.js backends, MongoDB-powered systems, and
-              production-ready user experiences.
+              I am Muhammad Hamza, an undergraduate software engineering student
+              focused on React, Node.js, MongoDB, and Flutter. I build portfolio-ready
+              products that look polished, work on mobile, and can be deployed live.
             </p>
 
             <div className="hero-contact-card">
@@ -145,14 +172,14 @@ function App() {
             </div>
 
             <div className="hero-actions">
-              <a className="primary-btn" href="#work">
-                View Projects
+              <a className="primary-btn" href="#case-studies">
+                View Case Studies
                 <ArrowUpRight size={18} />
               </a>
 
-              <a className="secondary-btn" href={`mailto:${contact.email}`}>
-                <Mail size={18} />
-                Start a Project
+              <a className="secondary-btn" href="/muhammad-hamza-cv.txt" download>
+                <Download size={18} />
+                Download CV
               </a>
             </div>
           </div>
@@ -167,9 +194,9 @@ function App() {
 
               <div className="terminal-body">
                 <p><span>$</span> npm run build</p>
-                <p className="success">✓ React frontend compiled</p>
-                <p className="success">✓ Node.js backend deployed</p>
-                <p className="success">✓ Flutter mobile UI ready</p>
+                <p className="success">Done: React frontend compiled</p>
+                <p className="success">Done: API architecture documented</p>
+                <p className="success">Done: production deployment shipped</p>
               </div>
             </div>
 
@@ -192,241 +219,24 @@ function App() {
           ))}
         </section>
 
-        <section className="featured-app" id="featured">
-          <div className="featured-copy">
-            <span className="project-type">Latest healthcare deployment</span>
-            <h2>CareSync - healthcare appointments and clinical workflows.</h2>
-            <p>
-              A MERN healthcare platform with doctor discovery, appointment
-              booking, patient and admin dashboards, prescriptions, responsive
-              mobile views, and AI-assisted visit summary workflows.
-            </p>
-
-            <div className="deployment-list" aria-label="CareSync deployment details">
-              <div>
-                <strong>Frontend</strong>
-                <span>Vercel production deployment</span>
-              </div>
-              <div>
-                <strong>Backend</strong>
-                <span>Express and MongoDB API architecture</span>
-              </div>
-              <div>
-                <strong>Experience</strong>
-                <span>Demo data fallback keeps the app explorable live</span>
-              </div>
-            </div>
-
-            <div className="hero-actions">
-              <a className="primary-btn" href="https://caresync-healthcare-platform.vercel.app" target="_blank" rel="noreferrer">
-                Open CareSync
-                <ArrowUpRight size={18} />
-              </a>
-
-              <a className="secondary-btn" href="#contact">
-                Build Healthcare Software
-                <Mail size={18} />
-              </a>
-            </div>
-          </div>
-
-          <a
-            className="app-preview healthcare-preview"
-            href="https://caresync-healthcare-platform.vercel.app"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Open the live CareSync healthcare platform"
-          >
-            <div className="preview-sidebar">
-              <span className="active-bubble">CS</span>
-              <span>DR</span>
-              <span>AI</span>
-            </div>
-            <div className="preview-main">
-              <div className="preview-top">
-                <strong>CareSync</strong>
-                <span>Live</span>
-              </div>
-              <div className="preview-message">
-                <span>DR</span>
-                <div>
-                  <strong>Doctor discovery</strong>
-                  <p>Search specialists, review profiles, and book clinic or video visits.</p>
-                </div>
-              </div>
-              <div className="preview-message compact">
-                <span>AI</span>
-                <div>
-                  <strong>Visit summaries</strong>
-                  <p>Gemini-ready assistant flow for care notes and patient education.</p>
-                </div>
-              </div>
-              <div className="preview-composer">Appointments, dashboards, prescriptions, and admin views</div>
-            </div>
-          </a>
-        </section>
-
-        <section className="featured-app">
-          <div className="featured-copy">
-            <span className="project-type">Featured deployed application</span>
-            <h2>Iscord - realtime Discord-style web app.</h2>
-            <p>
-              A production full-stack social platform with a polished mobile login
-              flow, responsive chat interface, direct messages, profile picture
-              uploads, admin-ready structure, realtime updates, and separate
-              frontend/backend deployment.
-            </p>
-
-            <div className="deployment-list" aria-label="Deployment details">
-              <div>
-                <strong>Frontend</strong>
-                <span>Vercel production deployment</span>
-              </div>
-              <div>
-                <strong>Backend</strong>
-                <span>Railway API and Socket.IO service</span>
-              </div>
-              <div>
-                <strong>Experience</strong>
-                <span>One public app link for visitors</span>
-              </div>
-            </div>
-
-            <div className="hero-actions">
-              <a className="primary-btn" href="https://hamza-discord-clone.vercel.app" target="_blank" rel="noreferrer">
-                Open Live App
-                <ArrowUpRight size={18} />
-              </a>
-
-              <a className="secondary-btn" href="#contact">
-                Discuss Similar Work
-                <Mail size={18} />
-              </a>
-            </div>
-          </div>
-
-          <a
-            className="app-preview"
-            href="https://hamza-discord-clone.vercel.app"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Open the live Iscord application"
-          >
-            <div className="preview-sidebar">
-              <span className="active-bubble">D</span>
-              <span>H</span>
-              <span>+</span>
-            </div>
-            <div className="preview-main">
-              <div className="preview-top">
-                <strong># general</strong>
-                <span>Live</span>
-              </div>
-              <div className="preview-message">
-                <span>H</span>
-                <div>
-                  <strong>hhamza</strong>
-                  <p>Realtime chat, mobile UI, and profile uploads are live.</p>
-                </div>
-              </div>
-              <div className="preview-message compact">
-                <span>I</span>
-                <div>
-                  <strong>Icord</strong>
-                  <p>Frontend on Vercel. Backend on Railway.</p>
-                </div>
-              </div>
-              <div className="preview-composer">Message #general</div>
-            </div>
-          </a>
-        </section>
-
-        <section className="featured-app saas-featured">
-          <div className="featured-copy">
-            <span className="project-type">New AI SaaS deployment</span>
-            <h2>LaunchPilot AI - SaaS landing page and dashboard.</h2>
-            <p>
-              A full-stack MERN SaaS application with public marketing pages,
-              demo login, protected dashboard, project workspaces, AI generation,
-              billing UI, admin analytics, and MongoDB Atlas-ready persistence.
-            </p>
-
-            <div className="deployment-list" aria-label="LaunchPilot deployment details">
-              <div>
-                <strong>Frontend</strong>
-                <span>Responsive React SaaS website</span>
-              </div>
-              <div>
-                <strong>Backend</strong>
-                <span>Express API under the same Vercel link</span>
-              </div>
-              <div>
-                <strong>Database</strong>
-                <span>MongoDB Atlas integration configured</span>
-              </div>
-            </div>
-
-            <div className="hero-actions">
-              <a className="primary-btn" href="https://launchpilot-ai-saas.vercel.app" target="_blank" rel="noreferrer">
-                Open Live SaaS
-                <ArrowUpRight size={18} />
-              </a>
-
-              <a className="secondary-btn" href="#contact">
-                Build Something Like This
-                <Mail size={18} />
-              </a>
-            </div>
-          </div>
-
-          <a
-            className="app-preview saas-preview"
-            href="https://launchpilot-ai-saas.vercel.app"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Open the live LaunchPilot AI SaaS application"
-          >
-            <div className="preview-sidebar">
-              <span className="active-bubble">AI</span>
-              <span>DB</span>
-              <span>$</span>
-            </div>
-            <div className="preview-main">
-              <div className="preview-top">
-                <strong>LaunchPilot AI</strong>
-                <span>Live</span>
-              </div>
-              <div className="saas-bars">
-                <i style={{ height: "44%" }} />
-                <i style={{ height: "68%" }} />
-                <i style={{ height: "82%" }} />
-                <i style={{ height: "58%" }} />
-              </div>
-              <div className="preview-message">
-                <span>LP</span>
-                <div>
-                  <strong>AI Studio</strong>
-                  <p>Generate SaaS copy, plans, pricing, and launch assets.</p>
-                </div>
-              </div>
-              <div className="preview-composer">Admin, billing, dashboard, and landing pages</div>
-            </div>
-          </a>
-        </section>
-
         <section className="section" id="work">
           <div className="section-heading">
             <span>Selected work</span>
-            <h2>Projects with real product thinking.</h2>
+            <h2>Live projects with real product surfaces.</h2>
+            <p>
+              Each project includes a live demo, source link where available,
+              product summary, and a case study breakdown.
+            </p>
           </div>
 
           <div className="project-grid">
             {projects.map((project) => (
               <article className="project-card" key={project.title}>
+                <LivePreview project={project} />
                 <div>
                   <span className="project-type">{project.type}</span>
                   <h3>{project.title}</h3>
-                  <p>{project.description}</p>
+                  <p>{project.summary}</p>
                 </div>
 
                 <div className="stack-list">
@@ -435,50 +245,129 @@ function App() {
                   ))}
                 </div>
 
-                <a href={project.link}>
-                  Explore
-                  <ArrowUpRight size={17} />
-                </a>
+                <div className="project-actions">
+                  <a href={project.live} target="_blank" rel="noreferrer">
+                    Live Demo
+                    <ArrowUpRight size={16} />
+                  </a>
+                  <a href={project.source} target="_blank" rel="noreferrer">
+                    Source
+                    <Code2 size={16} />
+                  </a>
+                  <a href={`#${project.slug}`}>
+                    Case Study
+                    <FileText size={16} />
+                  </a>
+                </div>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="section split-section" id="skills">
-          <div className="section-heading compact">
-            <span>Capabilities</span>
-            <h2>Full-stack engineering with strong web and mobile focus.</h2>
-            <p>
-              I work across React, Node.js, MongoDB, and Flutter, with a focus on
-              clean interfaces, stable APIs, responsive layouts, authentication,
-              and apps that feel professional on desktop and Android.
-            </p>
+        <section className="section case-study-section" id="case-studies">
+          <div className="section-heading">
+            <span>Case studies</span>
+            <h2>Problem, build decisions, and outcomes.</h2>
           </div>
 
-          <div className="skill-grid">
-            {skills.map(({ icon: Icon, label, detail }) => (
-              <div className="skill-item" key={label}>
-                <Icon size={22} />
-                <div>
-                  <strong>{label}</strong>
-                  <span>{detail}</span>
+          <div className="case-study-list">
+            {projects.map((project) => (
+              <article className="case-study" id={project.slug} key={project.slug}>
+                <div className="case-copy">
+                  <span className="project-type">{project.type}</span>
+                  <h3>{project.title}</h3>
+
+                  <div className="case-block">
+                    <strong>Problem</strong>
+                    <p>{project.problem}</p>
+                  </div>
+
+                  <div className="case-block">
+                    <strong>Solution</strong>
+                    <p>{project.solution}</p>
+                  </div>
+
+                  <div className="case-block">
+                    <strong>Outcome</strong>
+                    <p>{project.outcome}</p>
+                  </div>
+
+                  <div className="hero-actions">
+                    <a className="primary-btn" href={project.live} target="_blank" rel="noreferrer">
+                      Open Live Project
+                      <ArrowUpRight size={18} />
+                    </a>
+                    <a className="secondary-btn" href={project.source} target="_blank" rel="noreferrer">
+                      View GitHub
+                      <Code2 size={18} />
+                    </a>
+                  </div>
                 </div>
-              </div>
+
+                <div className={`case-media ${project.accent}`}>
+                  <LivePreview project={project} large />
+                  <div className="outcome-grid">
+                    {project.metrics.map((metric) => (
+                      <span key={metric}>{metric}</span>
+                    ))}
+                  </div>
+                </div>
+              </article>
             ))}
+          </div>
+        </section>
+
+        <section className="section split-section" id="about">
+          <div className="section-heading compact">
+            <span>About</span>
+            <h2>A practical builder for web, mobile, APIs, and deployment.</h2>
+            <p>
+              I like building products that can be shown, tested, and shipped.
+              My work combines interface polish with the backend structure needed
+              for real workflows: auth foundations, data models, dashboards,
+              admin views, AI routes, and deployment setup.
+            </p>
+            <a className="secondary-btn inline-btn" href="/muhammad-hamza-cv.txt" download>
+              <Download size={18} />
+              Download CV
+            </a>
+          </div>
+
+          <div className="about-panel">
+            <div className="outcome-list">
+              {outcomes.map((item) => (
+                <div key={item}>
+                  <CheckCircle2 size={18} />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="skill-grid">
+              {skills.map(({ icon: Icon, label, detail }) => (
+                <div className="skill-item" key={label}>
+                  <Icon size={22} />
+                  <div>
+                    <strong>{label}</strong>
+                    <span>{detail}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
         <section className="section process-section" id="process">
           <div className="section-heading">
             <span>How I work</span>
-            <h2>A clear process from idea to deployment.</h2>
+            <h2>A clear path from idea to production link.</h2>
           </div>
 
           <div className="process-grid">
             <div>
               <Layers3 size={24} />
               <strong>Plan the product flow</strong>
-              <p>Map the core screens, user actions, states, and data needed before building.</p>
+              <p>Map the core screens, user actions, states, and data before building.</p>
             </div>
 
             <div>
@@ -495,10 +384,35 @@ function App() {
           </div>
         </section>
 
+        <section className="section testimonial-section">
+          <div className="section-heading">
+            <span>Proof points</span>
+            <h2>Signals that make the work easier to trust.</h2>
+          </div>
+
+          <div className="testimonial-grid">
+            <article>
+              <BriefcaseBusiness size={22} />
+              <p>Built projects as complete product demos instead of isolated UI screens.</p>
+              <strong>Product depth</strong>
+            </article>
+            <article>
+              <Rocket size={22} />
+              <p>Shipped public links for portfolio review, client conversations, and interviews.</p>
+              <strong>Deployment ready</strong>
+            </article>
+            <article>
+              <ShieldCheck size={22} />
+              <p>Designed fallback states so visitors can still explore live apps reliably.</p>
+              <strong>Reliable demos</strong>
+            </article>
+          </div>
+        </section>
+
         <section className="contact-section" id="contact">
           <div>
             <span>Available for work</span>
-            <h2>Let’s build something professional.</h2>
+            <h2>Let us build something professional.</h2>
             <p>
               Reach out for portfolios, dashboards, full-stack MERN apps,
               React interfaces, Node.js APIs, Flutter mobile screens, landing
@@ -518,24 +432,67 @@ function App() {
             </div>
           </div>
 
-          <div className="contact-actions">
-            <a className="primary-btn" href={`mailto:${contact.email}`}>
-              <Mail size={18} />
-              Email Me
-            </a>
-
-            <a className="secondary-btn" href={contact.phoneHref}>
-              <Phone size={18} />
-              Call Me
-            </a>
-
-            <a className="secondary-btn" href="https://github.com/hamzahere28">
-              <Globe2 size={18} />
+          <form className="contact-form" action={`mailto:${contact.email}`} method="post" encType="text/plain">
+            <label>
+              Name
+              <input name="name" placeholder="Your name" required />
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" placeholder="you@example.com" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" placeholder="Tell me what you want to build" required />
+            </label>
+            <button className="primary-btn" type="submit">
+              Send Message
+              <Send size={18} />
+            </button>
+            <a className="secondary-btn" href={contact.github} target="_blank" rel="noreferrer">
               GitHub
+              <Code2 size={18} />
             </a>
-          </div>
+          </form>
         </section>
       </main>
+    </div>
+  );
+}
+
+function LivePreview({ project, large = false }) {
+  return (
+    <div className={large ? `live-preview large ${project.accent}` : `live-preview ${project.accent}`}>
+      <div className="browser-bar">
+        <span />
+        <span />
+        <span />
+        <small>{project.live.replace("https://", "")}</small>
+      </div>
+      <div className="preview-screen">
+        <div className="preview-hero-row">
+          <div>
+            <strong>{project.title}</strong>
+            <p>{project.type}</p>
+          </div>
+          <span>Live</span>
+        </div>
+        <div className="preview-layout">
+          <div className="preview-sidebar-mini">
+            {project.highlights.slice(0, 3).map((item) => (
+              <i key={item}>{item.slice(0, 2)}</i>
+            ))}
+          </div>
+          <div className="preview-content">
+            {project.highlights.map((item, index) => (
+              <div className="preview-row" key={item}>
+                <span style={{ width: `${92 - index * 12}%` }} />
+                <small>{item}</small>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
