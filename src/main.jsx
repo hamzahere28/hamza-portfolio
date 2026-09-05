@@ -1,12 +1,14 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import {
+  ArrowRight,
   ArrowUpRight,
+  BadgeCheck,
   BriefcaseBusiness,
   CheckCircle2,
   Code2,
   Database,
-  FileText,
+  Gauge,
   Globe2,
   Layers3,
   Mail,
@@ -15,7 +17,6 @@ import {
   Rocket,
   Send,
   Server,
-  ShieldCheck,
   Sparkles,
   Terminal,
   X
@@ -33,21 +34,20 @@ const projects = [
   {
     slug: "caresync",
     title: "CareSync",
-    type: "MERN Healthcare Platform",
+    type: "Healthcare Platform",
     live: "https://caresync-healthcare-platform.vercel.app",
     source: contact.github,
     summary:
-      "A deployed healthcare appointment platform with doctor discovery, booking, dashboards, prescriptions, admin workflows, and AI-assisted visit summaries.",
+      "A healthcare appointment product with doctor discovery, booking flows, dashboards, prescriptions, admin workflows, and AI-assisted visit summaries.",
     problem:
-      "Healthcare demos often stop at simple forms. CareSync was built to feel like a practical clinic product with patient, doctor, and admin workflows.",
+      "Healthcare demos usually feel like forms. CareSync needed to feel like a real clinic product across patients, doctors, and admins.",
     solution:
-      "I designed a multi-page React experience backed by an Express/MongoDB architecture, demo-safe fallback data, booking flows, operational dashboards, and Gemini-ready summary routes.",
-    outcome:
-      "The app is live on Vercel and remains explorable even when the backend is not running, which makes it reliable for portfolio visitors and interviews.",
+      "I built a multi-page React experience with Express/MongoDB architecture, demo-safe fallback data, booking flows, operational dashboards, and Gemini-ready summary routes.",
+    result:
+      "A reliable live demo that remains explorable for portfolio visitors even when backend services are unavailable.",
     stack: ["React", "Express", "MongoDB", "Gemini API", "Vercel"],
-    highlights: ["Doctor search", "Appointment booking", "Admin dashboard", "AI visit summaries"],
-    metrics: ["9+ pages", "3 user roles", "API-ready"],
-    accent: "healthcare"
+    stats: ["3 roles", "9+ screens", "AI-ready"],
+    theme: "mint"
   },
   {
     slug: "iscord",
@@ -56,17 +56,16 @@ const projects = [
     live: "https://hamza-discord-clone.vercel.app",
     source: "https://github.com/hamzahere28/discord-clone",
     summary:
-      "A deployed Discord-inspired chat platform with styled authentication, mobile-first chat, direct messages, profile uploads, roles, channels, and realtime messaging.",
+      "A Discord-inspired full-stack chat product with authentication styling, channels, direct messages, profile uploads, roles, and realtime messaging.",
     problem:
-      "The goal was to build more than a static chat UI: it needed live messaging, user flows, channel structure, and a mobile-friendly product surface.",
+      "The challenge was to go beyond a static chat UI and prove realtime architecture, channel structure, and mobile-first product behavior.",
     solution:
-      "I connected a React frontend with a Node/Socket.IO backend, MongoDB persistence, Railway API hosting, and Vercel frontend deployment.",
-    outcome:
-      "The result is a public full-stack app that demonstrates realtime product architecture, mobile UI decisions, and production deployment.",
-    stack: ["React", "Node.js", "Socket.IO", "MongoDB", "Vercel", "Railway"],
-    highlights: ["Realtime messages", "Direct messages", "Profile uploads", "Role structure"],
-    metrics: ["Live sockets", "Mobile UI", "Railway API"],
-    accent: "chat"
+      "I connected React with a Node/Socket.IO backend, MongoDB persistence, Railway API hosting, and a Vercel frontend deployment.",
+    result:
+      "A public full-stack app that demonstrates live product behavior, deployment handling, and responsive chat UX.",
+    stack: ["React", "Node.js", "Socket.IO", "MongoDB", "Railway"],
+    stats: ["Live sockets", "Mobile UI", "Railway API"],
+    theme: "violet"
   },
   {
     slug: "launchpilot",
@@ -75,41 +74,60 @@ const projects = [
     live: "https://launchpilot-ai-saas.vercel.app",
     source: "https://github.com/hamzahere28/mern-ai-saas",
     summary:
-      "A MERN SaaS product with a professional landing site, dashboard, admin panel, AI Studio, billing UI, MongoDB Atlas integration, and one-link Vercel deployment.",
+      "A MERN SaaS concept with a conversion-focused landing page, dashboard, admin panel, AI Studio, billing UI, MongoDB Atlas wiring, and deployment structure.",
     problem:
-      "SaaS demos need to show trust quickly: landing page, dashboard, admin views, pricing, and AI output should feel connected.",
+      "SaaS work needs trust quickly: landing page, dashboard, pricing, admin views, and AI output must feel connected instead of scattered.",
     solution:
-      "I built a polished product shell with protected dashboard-style screens, AI generation surfaces, billing UI, and deployment-ready environment structure.",
-    outcome:
-      "LaunchPilot AI shows full-stack SaaS thinking from marketing page to app dashboard, which helps position the work as product engineering.",
+      "I built a polished product shell with protected dashboard-style screens, AI generation surfaces, billing UI, and production-ready environment structure.",
+    result:
+      "A stronger product-engineering signal that shows the path from marketing page to real app dashboard.",
     stack: ["React", "Express", "MongoDB Atlas", "AI API", "Vercel"],
-    highlights: ["AI Studio", "Admin analytics", "Billing UI", "Dashboard"],
-    metrics: ["SaaS flow", "AI-ready", "Atlas-ready"],
-    accent: "saas"
+    stats: ["SaaS flow", "Admin UI", "Atlas-ready"],
+    theme: "amber"
+  }
+];
+
+const services = [
+  {
+    icon: Layers3,
+    title: "Landing Pages",
+    text: "Animated, responsive pages that make the offer clear fast and still feel premium on mobile."
+  },
+  {
+    icon: Server,
+    title: "MERN Apps",
+    text: "React interfaces, Express APIs, MongoDB schemas, dashboards, role flows, and deployment-ready structure."
+  },
+  {
+    icon: Gauge,
+    title: "UI Modernization",
+    text: "Upgrade weak layouts into polished product surfaces with better hierarchy, motion, and trust signals."
+  },
+  {
+    icon: Rocket,
+    title: "Deployment",
+    text: "Vercel, Railway, environment setup, build fixes, production aliases, and public demo polish."
   }
 ];
 
 const skills = [
-  { icon: Code2, label: "React Frontends", detail: "Responsive interfaces, dashboards, component systems, and polished UX" },
-  { icon: Server, label: "Node.js APIs", detail: "Express services, auth foundations, realtime features, and route design" },
-  { icon: Database, label: "MongoDB", detail: "Schemas, relationships, seed data, and production database wiring" },
-  { icon: Globe2, label: "Responsive Web", detail: "Mobile-friendly web layouts, landing pages, and product interfaces" },
-  { icon: Rocket, label: "Deployment", detail: "Vercel, Railway, environment variables, builds, aliases, and production fixes" },
-  { icon: ShieldCheck, label: "Product Quality", detail: "Validation, role flows, fallback states, and reliable demos" }
+  "React interfaces",
+  "Node.js APIs",
+  "MongoDB models",
+  "Socket.IO realtime",
+  "AI integrations",
+  "Vercel deployment",
+  "Railway backend",
+  "Responsive CSS",
+  "Dashboard UX",
+  "Product flows"
 ];
 
-const stats = [
-  ["4+", "Production-ready apps"],
-  ["3", "Live case studies"],
-  ["React + Node", "Core stack"],
-  ["BSE", "Software engineering"]
-];
-
-const outcomes = [
-  "Built and deployed full-stack MERN products with Vercel and Railway.",
-  "Designed portfolio-ready healthcare, SaaS, and realtime chat workflows.",
-  "Created responsive interfaces that stay usable on mobile and desktop.",
-  "Connected frontend experiences to API, database, auth, and AI foundations."
+const proof = [
+  ["4+", "production-ready apps"],
+  ["3", "live case studies"],
+  ["MERN", "core stack"],
+  ["BSE", "software engineering"]
 ];
 
 function App() {
@@ -117,26 +135,30 @@ function App() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <div className="site-shell">
-      <header className="navbar">
-        <a className="brand" href="#home" onClick={closeMenu}>
+    <div className="portfolio">
+      <div className="noise" />
+      <div className="spotlight spotlight-one" />
+      <div className="spotlight spotlight-two" />
+
+      <header className="nav">
+        <a className="brand" href="#home" onClick={closeMenu} aria-label="Muhammad Hamza home">
           <span>MH</span>
-          Muhammad Hamza
+          <strong>Muhammad Hamza</strong>
         </a>
 
         <button
-          className="menu-button"
+          className="menu-toggle"
           type="button"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           onClick={() => setMenuOpen((open) => !open)}
         >
-          {menuOpen ? <X size={22} /> : <Menu size={22} />}
+          {menuOpen ? <X size={21} /> : <Menu size={21} />}
         </button>
 
         <nav className={menuOpen ? "nav-links open" : "nav-links"}>
           <a href="#work" onClick={closeMenu}>Work</a>
+          <a href="#services" onClick={closeMenu}>Services</a>
           <a href="#case-studies" onClick={closeMenu}>Case Studies</a>
-          <a href="#about" onClick={closeMenu}>About</a>
           <a href="#contact" onClick={closeMenu}>Contact</a>
         </nav>
       </header>
@@ -144,117 +166,129 @@ function App() {
       <main>
         <section className="hero" id="home">
           <div className="hero-copy">
-            <div className="eyebrow">
-              <Sparkles size={16} />
-              Full-stack web developer
+            <div className="status-pill">
+              <span />
+              Available for full-stack web projects
             </div>
 
-            <h1>Building deployed products with clean UI, stable APIs, and product thinking.</h1>
+            <h1>I build polished web products that look sharp, feel fast, and ship live.</h1>
 
             <p>
-              I am Muhammad Hamza, an undergraduate software engineering student
-              focused on React, Node.js, and MongoDB. I build portfolio-ready
-              products that look polished, work on mobile, and can be deployed live.
+              I am Muhammad Hamza, a software engineering undergraduate focused on
+              React, Node.js, MongoDB, realtime features, AI workflows, and deployment.
+              My portfolio is built around live products, not placeholder screens.
             </p>
 
-            <div className="hero-contact-card">
-              <a href={`mailto:${contact.email}`}>
-                <Mail size={17} />
-                {contact.email}
+            <div className="hero-actions">
+              <a className="btn primary" href="#work">
+                See the work
+                <ArrowRight size={18} />
               </a>
-
-              <a href={contact.phoneHref}>
-                <Phone size={17} />
-                {contact.phone}
+              <a className="btn secondary" href={`mailto:${contact.email}`}>
+                <Mail size={18} />
+                Hire me
               </a>
             </div>
 
-            <div className="hero-actions">
-              <a className="primary-btn" href="#case-studies">
-                View Case Studies
-                <ArrowUpRight size={18} />
-              </a>
-
-              <a className="secondary-btn" href={`mailto:${contact.email}`}>
-                <Mail size={18} />
-                Contact Me
-              </a>
+            <div className="proof-strip" aria-label="Portfolio proof">
+              {proof.map(([value, label]) => (
+                <div key={label}>
+                  <strong>{value}</strong>
+                  <span>{label}</span>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="hero-visual" aria-label="Developer profile visual">
-            <div className="terminal-card">
-              <div className="terminal-top">
-                <span />
-                <span />
-                <span />
-              </div>
+          <div className="hero-stage" aria-label="Animated portfolio preview">
+            <div className="orbit orbit-one" />
+            <div className="orbit orbit-two" />
 
-              <div className="terminal-body">
-                <p><span>$</span> npm run build</p>
-                <p className="success">Done: React frontend compiled</p>
-                <p className="success">Done: API architecture documented</p>
-                <p className="success">Done: production deployment shipped</p>
+            <div className="profile-panel">
+              <img src="/profile-photo.jpeg" alt="Muhammad Hamza" />
+              <div>
+                <strong>Muhammad Hamza</strong>
+                <span>Full-stack product builder</span>
+              </div>
+              <BadgeCheck size={20} />
+            </div>
+
+            <div className="showcase-device">
+              <div className="device-top">
+                <span />
+                <span />
+                <span />
+                <small>portfolio.live</small>
+              </div>
+              <div className="device-body">
+                <div className="app-preview-header">
+                  <Sparkles size={18} />
+                  <span>Product launch dashboard</span>
+                </div>
+                <div className="metric-row">
+                  <div><strong>98</strong><span>UI score</span></div>
+                  <div><strong>3</strong><span>case studies</span></div>
+                  <div><strong>Live</strong><span>deploys</span></div>
+                </div>
+                <div className="chart-card">
+                  <i />
+                  <i />
+                  <i />
+                  <i />
+                  <i />
+                </div>
+                <div className="task-list">
+                  <span><CheckCircle2 size={15} /> React frontend</span>
+                  <span><CheckCircle2 size={15} /> Node API</span>
+                  <span><CheckCircle2 size={15} /> Production deploy</span>
+                </div>
               </div>
             </div>
 
-            <div className="profile-card">
-              <img className="profile-photo" src="/profile-photo.jpeg" alt="Muhammad Hamza" />
-              <div>
-                <strong>Muhammad Hamza</strong>
-                <span>Software engineering undergraduate</span>
-              </div>
+            <div className="code-float">
+              <Terminal size={18} />
+              <span>npm run build: shipped</span>
             </div>
           </div>
         </section>
 
-        <section className="stats-strip" aria-label="Portfolio highlights">
-          {stats.map(([value, label]) => (
-            <div key={label}>
-              <strong>{value}</strong>
-              <span>{label}</span>
-            </div>
-          ))}
+        <section className="ticker" aria-label="Core skills">
+          <div>
+            {skills.concat(skills).map((skill, index) => (
+              <span key={`${skill}-${index}`}>{skill}</span>
+            ))}
+          </div>
         </section>
 
         <section className="section" id="work">
-          <div className="section-heading">
-            <span>Selected work</span>
-            <h2>Live projects with real product surfaces.</h2>
-            <p>
-              Each project includes a live demo, source link where available,
-              product summary, and a case study breakdown.
-            </p>
-          </div>
+          <SectionIntro
+            eyebrow="Selected work"
+            title="Live projects with product depth, deployment, and real workflows."
+            text="Each project is positioned like a professional case study: what it solves, what was built, and why it matters."
+          />
 
-          <div className="project-grid">
-            {projects.map((project) => (
-              <article className="project-card" key={project.title}>
-                <LivePreview project={project} />
-                <div>
-                  <span className="project-type">{project.type}</span>
+          <div className="work-grid">
+            {projects.map((project, index) => (
+              <article className={`work-card ${project.theme}`} key={project.slug}>
+                <ProjectMockup project={project} index={index} />
+                <div className="work-card-copy">
+                  <span>{project.type}</span>
                   <h3>{project.title}</h3>
                   <p>{project.summary}</p>
                 </div>
-
-                <div className="stack-list">
+                <div className="stack">
                   {project.stack.map((item) => (
                     <span key={item}>{item}</span>
                   ))}
                 </div>
-
-                <div className="project-actions">
+                <div className="card-actions">
                   <a href={project.live} target="_blank" rel="noreferrer">
                     Live Demo
                     <ArrowUpRight size={16} />
                   </a>
-                  <a href={project.source} target="_blank" rel="noreferrer">
-                    Source
-                    <Code2 size={16} />
-                  </a>
                   <a href={`#${project.slug}`}>
                     Case Study
-                    <FileText size={16} />
+                    <ArrowRight size={16} />
                   </a>
                 </div>
               </article>
@@ -262,51 +296,57 @@ function App() {
           </div>
         </section>
 
-        <section className="section case-study-section" id="case-studies">
-          <div className="section-heading">
-            <span>Case studies</span>
-            <h2>Problem, build decisions, and outcomes.</h2>
+        <section className="section services" id="services">
+          <SectionIntro
+            eyebrow="What I can build"
+            title="A portfolio that now sells capability, not just code."
+            text="The upgrade gives visitors quick signals: what I build, how I ship, and what kind of product work I can own."
+          />
+
+          <div className="service-grid">
+            {services.map(({ icon: Icon, title, text }) => (
+              <article className="service-card" key={title}>
+                <Icon size={24} />
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </article>
+            ))}
           </div>
+        </section>
 
-          <div className="case-study-list">
-            {projects.map((project) => (
-              <article className="case-study" id={project.slug} key={project.slug}>
-                <div className="case-copy">
-                  <span className="project-type">{project.type}</span>
+        <section className="section case-section" id="case-studies">
+          <SectionIntro
+            eyebrow="Case studies"
+            title="The build story behind each live product."
+            text="This is the part recruiters and clients usually need: not only what exists, but what problem it solves and how it was shipped."
+          />
+
+          <div className="case-list">
+            {projects.map((project, index) => (
+              <article className={`case-card ${project.theme}`} id={project.slug} key={project.slug}>
+                <div className="case-number">0{index + 1}</div>
+                <div className="case-main">
+                  <span>{project.type}</span>
                   <h3>{project.title}</h3>
-
-                  <div className="case-block">
-                    <strong>Problem</strong>
-                    <p>{project.problem}</p>
-                  </div>
-
-                  <div className="case-block">
-                    <strong>Solution</strong>
-                    <p>{project.solution}</p>
-                  </div>
-
-                  <div className="case-block">
-                    <strong>Outcome</strong>
-                    <p>{project.outcome}</p>
-                  </div>
-
-                  <div className="hero-actions">
-                    <a className="primary-btn" href={project.live} target="_blank" rel="noreferrer">
-                      Open Live Project
-                      <ArrowUpRight size={18} />
+                  <p>{project.summary}</p>
+                  <div className="case-actions">
+                    <a className="btn primary" href={project.live} target="_blank" rel="noreferrer">
+                      Open live
+                      <ArrowUpRight size={17} />
                     </a>
-                    <a className="secondary-btn" href={project.source} target="_blank" rel="noreferrer">
-                      View GitHub
-                      <Code2 size={18} />
+                    <a className="btn ghost" href={project.source} target="_blank" rel="noreferrer">
+                      GitHub
+                      <Code2 size={17} />
                     </a>
                   </div>
                 </div>
-
-                <div className={`case-media ${project.accent}`}>
-                  <LivePreview project={project} large />
-                  <div className="outcome-grid">
-                    {project.metrics.map((metric) => (
-                      <span key={metric}>{metric}</span>
+                <div className="case-detail">
+                  <DetailBlock label="Problem" text={project.problem} />
+                  <DetailBlock label="Solution" text={project.solution} />
+                  <DetailBlock label="Result" text={project.result} />
+                  <div className="mini-stats">
+                    {project.stats.map((stat) => (
+                      <strong key={stat}>{stat}</strong>
                     ))}
                   </div>
                 </div>
@@ -315,118 +355,36 @@ function App() {
           </div>
         </section>
 
-        <section className="section split-section" id="about">
-          <div className="section-heading compact">
-            <span>About</span>
-            <h2>A practical builder for web, mobile, APIs, and deployment.</h2>
+        <section className="section build-system">
+          <div className="system-copy">
+            <span className="eyebrow">Build system</span>
+            <h2>From idea to a link people can actually click.</h2>
             <p>
-              I like building products that can be shown, tested, and shipped.
-              My work combines interface polish with the backend structure needed
-              for real workflows: auth foundations, data models, dashboards,
-              admin views, AI routes, and deployment setup.
+              I focus on the full path: plan the user flow, design the interface,
+              wire the backend, connect data, test the mobile experience, and deploy it.
             </p>
-            <a className="secondary-btn inline-btn" href={contact.github} target="_blank" rel="noreferrer">
-              <Code2 size={18} />
-              View GitHub
-            </a>
           </div>
 
-          <div className="about-panel">
-            <div className="outcome-list">
-              {outcomes.map((item) => (
-                <div key={item}>
-                  <CheckCircle2 size={18} />
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="skill-grid">
-              {skills.map(({ icon: Icon, label, detail }) => (
-                <div className="skill-item" key={label}>
-                  <Icon size={22} />
-                  <div>
-                    <strong>{label}</strong>
-                    <span>{detail}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div className="system-grid">
+            <div><BriefcaseBusiness size={22} /><strong>Product flow</strong><span>Pages, states, roles, actions</span></div>
+            <div><Code2 size={22} /><strong>Frontend</strong><span>React UI, animations, responsive CSS</span></div>
+            <div><Database size={22} /><strong>Backend</strong><span>Express APIs, MongoDB data, realtime</span></div>
+            <div><Globe2 size={22} /><strong>Launch</strong><span>Vercel, Railway, production polish</span></div>
           </div>
         </section>
 
-        <section className="section process-section" id="process">
-          <div className="section-heading">
-            <span>How I work</span>
-            <h2>A clear path from idea to production link.</h2>
-          </div>
-
-          <div className="process-grid">
-            <div>
-              <Layers3 size={24} />
-              <strong>Plan the product flow</strong>
-              <p>Map the core screens, user actions, states, and data before building.</p>
-            </div>
-
-            <div>
-              <Terminal size={24} />
-              <strong>Build the system</strong>
-              <p>Implement frontend, backend, auth, realtime logic, and database models.</p>
-            </div>
-
-            <div>
-              <Globe2 size={24} />
-              <strong>Ship and improve</strong>
-              <p>Deploy live, fix production issues, tune mobile UI, and keep the app stable.</p>
-            </div>
-          </div>
-        </section>
-
-        <section className="section testimonial-section">
-          <div className="section-heading">
-            <span>Proof points</span>
-            <h2>Signals that make the work easier to trust.</h2>
-          </div>
-
-          <div className="testimonial-grid">
-            <article>
-              <BriefcaseBusiness size={22} />
-              <p>Built projects as complete product demos instead of isolated UI screens.</p>
-              <strong>Product depth</strong>
-            </article>
-            <article>
-              <Rocket size={22} />
-              <p>Shipped public links for portfolio review, client conversations, and interviews.</p>
-              <strong>Deployment ready</strong>
-            </article>
-            <article>
-              <ShieldCheck size={22} />
-              <p>Designed fallback states so visitors can still explore live apps reliably.</p>
-              <strong>Reliable demos</strong>
-            </article>
-          </div>
-        </section>
-
-        <section className="contact-section" id="contact">
-          <div>
-            <span>Available for work</span>
-            <h2>Let us build something professional.</h2>
+        <section className="contact" id="contact">
+          <div className="contact-copy">
+            <span className="eyebrow">Contact</span>
+            <h2>Ready to build a cleaner, sharper web product?</h2>
             <p>
-              Reach out for portfolios, dashboards, full-stack MERN apps,
-              React interfaces, Node.js APIs, dashboards, landing
-              pages, or mobile-responsive UI improvements.
+              Send the idea, app, or website you want to upgrade. I can help with
+              full-stack MERN builds, dashboards, landing pages, deployment, and UI polish.
             </p>
-
-            <div className="contact-details">
-              <a href={`mailto:${contact.email}`}>
-                <Mail size={18} />
-                {contact.email}
-              </a>
-
-              <a href={contact.phoneHref}>
-                <Phone size={18} />
-                {contact.phone}
-              </a>
+            <div className="contact-links">
+              <a href={`mailto:${contact.email}`}><Mail size={18} />{contact.email}</a>
+              <a href={contact.phoneHref}><Phone size={18} />{contact.phone}</a>
+              <a href={contact.github} target="_blank" rel="noreferrer"><Code2 size={18} />GitHub</a>
             </div>
           </div>
 
@@ -440,17 +398,13 @@ function App() {
               <input name="email" type="email" placeholder="you@example.com" required />
             </label>
             <label>
-              Message
-              <textarea name="message" placeholder="Tell me what you want to build" required />
+              Project
+              <textarea name="message" placeholder="Tell me what you want to build or improve" required />
             </label>
-            <button className="primary-btn" type="submit">
-              Send Message
+            <button className="btn primary" type="submit">
+              Send message
               <Send size={18} />
             </button>
-            <a className="secondary-btn" href={contact.github} target="_blank" rel="noreferrer">
-              GitHub
-              <Code2 size={18} />
-            </a>
           </form>
         </section>
       </main>
@@ -458,34 +412,50 @@ function App() {
   );
 }
 
-function LivePreview({ project, large = false }) {
+function SectionIntro({ eyebrow, title, text }) {
   return (
-    <div className={large ? `live-preview large ${project.accent}` : `live-preview ${project.accent}`}>
-      <div className="browser-bar">
+    <div className="section-intro">
+      <span className="eyebrow">{eyebrow}</span>
+      <h2>{title}</h2>
+      <p>{text}</p>
+    </div>
+  );
+}
+
+function DetailBlock({ label, text }) {
+  return (
+    <div className="detail-block">
+      <strong>{label}</strong>
+      <p>{text}</p>
+    </div>
+  );
+}
+
+function ProjectMockup({ project, index }) {
+  return (
+    <div className="mockup" style={{ "--delay": `${index * 0.15}s` }}>
+      <div className="mockup-top">
         <span />
         <span />
         <span />
         <small>{project.live.replace("https://", "")}</small>
       </div>
-      <div className="preview-screen">
-        <div className="preview-hero-row">
-          <div>
-            <strong>{project.title}</strong>
-            <p>{project.type}</p>
-          </div>
-          <span>Live</span>
+      <div className="mockup-body">
+        <div className="mockup-hero">
+          <strong>{project.title}</strong>
+          <em>Live</em>
         </div>
-        <div className="preview-layout">
-          <div className="preview-sidebar-mini">
-            {project.highlights.slice(0, 3).map((item) => (
-              <i key={item}>{item.slice(0, 2)}</i>
-            ))}
+        <div className="mockup-layout">
+          <div className="mock-sidebar">
+            <i />
+            <i />
+            <i />
           </div>
-          <div className="preview-content">
-            {project.highlights.map((item, index) => (
-              <div className="preview-row" key={item}>
-                <span style={{ width: `${92 - index * 12}%` }} />
-                <small>{item}</small>
+          <div className="mock-content">
+            {project.stats.map((stat, row) => (
+              <div className="mock-row" key={stat}>
+                <span style={{ width: `${92 - row * 14}%` }} />
+                <small>{stat}</small>
               </div>
             ))}
           </div>

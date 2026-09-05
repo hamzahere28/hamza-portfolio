@@ -1,19 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
-    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-      <stop stop-color="#38bdf8"/>
-      <stop offset="1" stop-color="#f4c95d"/>
+    <linearGradient id="screen" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#43f4ff"/>
+      <stop offset=".52" stop-color="#ffd335"/>
+      <stop offset="1" stop-color="#ff4d9d"/>
     </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="18" dy="18" stdDeviation="0" flood-color="#43f4ff" flood-opacity=".85"/>
+    </filter>
   </defs>
-  <rect width="1200" height="630" fill="#0b0f14"/>
-  <circle cx="160" cy="90" r="240" fill="#38bdf8" opacity=".14"/>
-  <circle cx="1040" cy="580" r="260" fill="#f4c95d" opacity=".14"/>
-  <rect x="72" y="72" width="1056" height="486" rx="34" fill="#111821" stroke="rgba(255,255,255,.14)"/>
-  <text x="118" y="174" fill="#9ee7ff" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="800">FULL-STACK WEB DEVELOPER</text>
-  <text x="118" y="286" fill="#f7fafc" font-family="Inter,Arial,sans-serif" font-size="78" font-weight="900">Muhammad Hamza</text>
-  <text x="118" y="360" fill="#9aa8b8" font-family="Inter,Arial,sans-serif" font-size="34">React, Node.js, MongoDB, AI SaaS, healthcare, realtime chat</text>
-  <rect x="118" y="428" width="280" height="70" rx="18" fill="url(#g)"/>
-  <text x="148" y="473" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="900">View Case Studies</text>
-  <rect x="800" y="170" width="250" height="250" rx="46" fill="url(#g)"/>
-  <text x="848" y="326" fill="#ffffff" font-family="Inter,Arial,sans-serif" font-size="98" font-weight="900">MH</text>
+  <rect width="1200" height="630" fill="#050505"/>
+  <path d="M0 116h1200M0 232h1200M0 348h1200M0 464h1200M140 0v630M280 0v630M420 0v630M560 0v630M700 0v630M840 0v630M980 0v630M1120 0v630" stroke="#ffffff" stroke-opacity=".055"/>
+  <circle cx="174" cy="112" r="240" fill="#43f4ff" opacity=".2"/>
+  <circle cx="1030" cy="526" r="280" fill="#ffd335" opacity=".18"/>
+  <rect x="72" y="72" width="1056" height="486" rx="28" fill="#101010" stroke="#ffffff" stroke-opacity=".16"/>
+  <rect x="104" y="102" width="156" height="54" rx="14" fill="#ffd335"/>
+  <text x="128" y="137" fill="#050505" font-family="Inter,Arial,sans-serif" font-size="23" font-weight="900">AVAILABLE</text>
+  <text x="112" y="236" fill="#fffaf0" font-family="Inter,Arial,sans-serif" font-size="76" font-weight="900">Muhammad Hamza</text>
+  <text x="112" y="318" fill="#fffaf0" font-family="Inter,Arial,sans-serif" font-size="58" font-weight="900">Full-Stack Product Builder</text>
+  <text x="112" y="382" fill="#fff7e5" fill-opacity=".72" font-family="Inter,Arial,sans-serif" font-size="31">React, Node.js, MongoDB, AI workflows, realtime apps, deployment</text>
+  <rect x="112" y="440" width="318" height="70" rx="16" fill="#ffd335"/>
+  <text x="144" y="484" fill="#050505" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="900">View Live Projects</text>
+  <g filter="url(#shadow)">
+    <rect x="760" y="142" width="286" height="286" rx="32" fill="url(#screen)"/>
+    <rect x="792" y="180" width="222" height="42" rx="14" fill="#050505" opacity=".9"/>
+    <rect x="792" y="246" width="160" height="24" rx="12" fill="#050505" opacity=".75"/>
+    <rect x="792" y="292" width="198" height="24" rx="12" fill="#050505" opacity=".75"/>
+    <rect x="792" y="338" width="118" height="24" rx="12" fill="#050505" opacity=".75"/>
+  </g>
+  <text x="828" y="502" fill="#ffd335" font-family="Inter,Arial,sans-serif" font-size="74" font-weight="900">MH</text>
 </svg>
